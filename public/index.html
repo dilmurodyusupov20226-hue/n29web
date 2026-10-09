@@ -1982,7 +1982,7 @@
                 <span>→</span>
               </button>
               <button class="quick-btn" onclick="sendQuickQuestion('Arowwai Industries\'da qanday vazifalarni bajargansiz?')">
-                <span>Arowwai Industries\'da nima ish qilgansiz?</span>
+                <span>Arowwai Industries'da nima ish qilgansiz?</span>
                 <span>→</span>
               </button>
               <button class="quick-btn" onclick="sendQuickQuestion('Qaysi tillarni bilasiz?')">
@@ -2160,7 +2160,13 @@
           body: JSON.stringify({ message: question })
         });
 
-        const data = await response.json();
+        const rawText = await response.text();
+        let data = {};
+        try {
+          data = JSON.parse(rawText);
+        } catch (e) {
+          throw new Error(`Serverdan noto'g'ri formatda javob qaytdi (HTTP ${response.status}): ${rawText.slice(0, 120)}`);
+        }
         hideTyping();
 
         if (response.ok && data.reply) {

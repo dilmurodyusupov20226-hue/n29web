@@ -12,8 +12,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Netlify cache and state
+# Netlify & Vercel cache and state
 .netlify/
+.vercel/
 
 # System files
 .DS_Store

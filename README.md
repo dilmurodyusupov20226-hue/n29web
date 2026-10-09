@@ -80,6 +80,17 @@ Browserda oching: **`http://localhost:3000`**
 
 ---
 
+## ⚡ Vercel-ga Deploy Qilish
+
+1. Kodni GitHub repozitoriysiga yuklang.
+2. Vercel dashboardiga kiring (`Add New... -> Project -> Import Git Repository`).
+3. Vercel loyiha sozlamalarini avtomatik taniydi (`vercel.json` orqali `public` papkasi statik, `api/chat.js` esa Serverless Function bo'ladi).
+4. `Environment Variables` bo'limida quyidagini qo'shing:
+   - `DEEPSEEK_API_KEY` = `sizning_deepseek_api_kalitingiz`
+5. **Deploy** tugmasini bosing — loyihangiz global tezyurar Vercel Edge tarmog'ida faollashadi!
+
+---
+
 ## 🛡️ Diagnostika & Xatoliklarni Tutish
 - Server ishga tushganda konsolda API kalitining birinchi 6 belgisi (masalan: `sk-...`) diagnostika maqsadida xavfsiz ko'rsatiladi.
 - Agar API limitida yoki tarmoqda xatolik yuz bersa, frontend chat oynasida to'liq tafsilot (`details`) ko'rsatiladi, bu esa nosozliklarni tezda aniqlash imkonini beradi.

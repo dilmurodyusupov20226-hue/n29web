@@ -1,0 +1,24 @@
+{
+  "name": "daniel-gallego-portfolio-ai-twin",
+  "version": "1.0.0",
+  "description": "Daniel Gallego - Professional Graphic Designer Portfolio & AI Twin Website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [
+    "portfolio",
+    "ai-twin",
+    "deepseek",
+    "express",
+    "netlify"
+  ],
+  "author": "Daniel Gallego",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "openai": "^4.86.1"
+  }
+}

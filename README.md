@@ -84,10 +84,10 @@ Browserda oching: **`http://localhost:3000`**
 
 1. Kodni GitHub repozitoriysiga yuklang.
 2. Vercel dashboardiga kiring (`Add New... -> Project -> Import Git Repository`).
-3. Vercel loyiha sozlamalarini avtomatik taniydi (`vercel.json` orqali `public` papkasi statik, `api/chat.js` esa Serverless Function bo'ladi).
+3. Vercel Express arxitekturasini avtomatik taniydi (ildizdagi `server.js` va `public` papkasi avtomatik deploy qilinadi).
 4. `Environment Variables` bo'limida quyidagini qo'shing:
    - `DEEPSEEK_API_KEY` = `sizning_deepseek_api_kalitingiz`
-5. **Deploy** tugmasini bosing — loyihangiz global tezyurar Vercel Edge tarmog'ida faollashadi!
+5. **Deploy** tugmasini bosing — loyihangiz global tezyurar Vercel Edge tarmog'ida muvaffaqiyatli faollashadi!
 
 ---
 

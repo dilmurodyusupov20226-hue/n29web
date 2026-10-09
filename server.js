@@ -169,6 +169,10 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-app.listen(PORT, () => {
-  console.log(`[SERVER] Portfolio va AI Twin serveri ishga tushdi: http://localhost:${PORT}`);
-});
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`[SERVER] Portfolio va AI Twin serveri ishga tushdi: http://localhost:${PORT}`);
+  });
+}
+
+module.exports = app;
